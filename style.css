@@ -7,7 +7,7 @@
     box-sizing: border-box;
     text-decoration: none;
     background-size: 500vh;
-    background-color:rgb(0, 0, 0);
+    background-color:black;
 }
 .ball {
     position: fixed;
@@ -423,15 +423,50 @@ section{
     display: none;
   }
 
-  /* education section styling */
+/* about section styling */
+.about .title::after{
+    color: rgb(240, 17, 244);
+}
+.about .title{
+    color:white;
+    text-align:center;
+    font-family: 'Lexend Giga', sans-serif;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 200px;
+}
+.about .about-content .right{
+    width: 55%;
+    
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: rgb(237, 18, 127);
+}
+.about .about-content .right p{
+    text-align: justify;
+    color: white;
+}
+/* education section styling */
 
-  .education .box-container{
+.education .box-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     padding:1rem 0;
-    padding-left: 7rem;
+    padding-left: 3rem;
 }
 .education .heading{
     font-family: 'Poppins', sans-serif;
@@ -464,7 +499,7 @@ section{
 .education .box-container .box span{
     font-size: 1rem;
     background:#222;
-    color:rgb(225, 211, 211);
+    color:#fff;
     border-radius: 5rem;
     padding:.5rem 2.5rem;
     font-family: 'Poppins', sans-serif;
@@ -497,87 +532,100 @@ section{
     background:var(--yellow);
 }
 
-
-/* about section styling */
-.about .title::after{
-    color: gray;
+/* works.works sworkon styling */
+.works, .teams{
+    color:#fff;
+    background: #111;
 }
-.about .title{
-    color:white;
-    text-align:center;
-    font-family: 'Lexend Giga', sans-serif;
+.works .title::before,
+.teams .title::before{
+    background: #fff;
+    margin-bottom:20px;	
 }
-.about .about-content .left{
-    width: 45%;
+.works .title::after,
+.teams .title::after{
+    background: #111;
 }
-.about .about-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 200px;
+.works .work-content .card{
+    width: calc(43% - 30px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-.about .about-content .right{
-    width: 55%;
-    
+.works .work-content .card:hover{
+    background: rgb(245, 243, 243);
 }
-.about .about-content .right .text{
+.works .work-content .card .box{
+    transition: all 0.3s ease;
+}
+.works .work-content .card:hover .box{
+    transform: scale(1.05);
+}
+.works .work-content .card i{
+    font-size: 50px;
+    color: rgb(240, 233, 235);
+    transition: color 0.3s ease;
+}
+.works .work-content .card:hover i{
+    color: #fff;
+}
+.works .work-content .card .text{
     font-size: 25px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 10px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
 }
-.about .about-content .right .text span{
-    color: rgb(186, 17, 102);
-}
-.about .about-content .right p{
-    text-align: justify;
-    color: white;
+.works .work-content .card a{
+    color: #fff;
 }
 
 /* skills section styling */
 .skills .title{ 
-    color:aliceblue;
-    text-align: center;
-    font-family: 'Lexend Giga', sans-serif;
-margin-bottom:20px;	
+         color:aliceblue;
+         text-align: center;
+         font-family: 'Lexend Giga', sans-serif;
+	 margin-bottom:20px;	
 }
 #bars {
-overflow: hidden; 
+	 overflow: hidden; 
 } 
 
 .bar {
-width: 30%;
-text-align: center;
-display:inline-table;
+	width: 30%;
+	text-align: center;
+    display:inline-table;
 }
 
 .bar h3 {
-font-size: 50px;
-font-weight: normal;
-margin: 0;
-color: #fff;
-text-transform: uppercase;
+	font-size: 50px;
+	font-weight: normal;
+	margin: 0;
+    color: #fff;
+	text-transform: uppercase;
 }
 
 .bar-circle {
-display: list-item;
-font-size: 500px;
-margin: 80px;
+	display: list-item;
+    font-size: 500px;
+    margin: 80px;
 }
 
 .active .bar{
-animation: fade-right 1s ease-in;
+    animation: fade-right 1s ease-in;
 }
-@keyframes fade-right {
-0% {
- transform: translateX(100px);
- opacity: 0;
-}
-100% {
- transform: translateX(0);
- opacity: 1;
-}
-}
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
 
 
@@ -618,7 +666,7 @@ animation: fade-right 1s ease-in;
     color:white;
 }
 .contact .contact-content .info .sub-title{
-    color: rgb(255, 247, 247);
+    color: #333;
 }
 .contact .right form .fields{
     display: flex;
@@ -682,13 +730,13 @@ animation: fade-right 1s ease-in;
 }
 /* footer section styling */
 footer{
-    background: rgb(5, 25, 41);
+    background: #111;
     padding: 15px 23px;
     color: #fff;
     text-align: center;
 }
 footer span a{
-    color: rgb(212, 20, 84);
+    color: rgb(239, 1, 81);
     text-decoration: none;
 }
 footer span a:hover{
@@ -781,7 +829,6 @@ footer span a:hover{
     }
 }
 
-
 @media (max-width: 690px) {
     .max-width{
         padding: 0 23px;
@@ -828,5 +875,10 @@ footer span a:hover{
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+}
+@media(max-width:400px){
+    .education .box-container .box{
+        width:100%;
     }
 }
