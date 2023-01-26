@@ -73,7 +73,7 @@ $(document).ready(function(){
 });
 
 // Some random colors
-const colors = ["blue"];
+const colors = ["white"];
 const numBalls = 30;
 const balls = [];
 
